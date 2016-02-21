@@ -3,12 +3,12 @@
     white-space: pre-wrap;
   }
   .blinker {
-    animation: blink 0.75s infinite;
+    animation: qt-blink 0.75s infinite;
     font-weight:bold;
   }
 }
 
-@keyframes blink {
+@keyframes qt-blink {
   0% {opacity: 0}
   50% {opacity : 1}
   100% {opacity : 0}

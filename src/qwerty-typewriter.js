@@ -5,6 +5,15 @@
         speed : 100
     };
 
+    var _initElement = function(element) {
+        this.container = $(document.createElement('span')).appendTo(element);
+
+        $(document.createElement('span'))
+            .addClass('blinker')
+            .text('|')
+            .appendTo(element);
+    };
+
     var _initTyper = function() {
         this.container.html('');
     };
@@ -23,14 +32,14 @@
     var Qtyper = function(element, options) {
         this.options = $.extend({}, _defaults, options);
 
-        this.element = element.addClass('qtyper');
-        this.container = $(document.createElement('span')).appendTo(element);
-        this.blinker = $(document.createElement('span')).addClass('blinker').text('|').appendTo(element);
+        element.addClass('qtyper');
+
+        _initElement.call(this, element);
     };
 
     Qtyper.prototype = {
         type : function(text) {
-            this.options.text = text;
+            this.options.text = text || this.options.text;
             _initTyper.call(this);
             _startWriting.call(this);
         }

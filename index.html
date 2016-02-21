@@ -15,6 +15,10 @@
             max-width : 100%;
         }
 
+        #typewriter {
+            background : #F0F0F0;
+        }
+
         #typewriter,
         textarea {
             border: 1px solid #CCC;
@@ -55,6 +59,7 @@
     $('button').click(function(){
         qtyper.type(source.val());
     });
+    source.focus();
 </script>
 </body>
 </html>

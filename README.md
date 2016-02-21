@@ -3,6 +3,7 @@ Typewriter jQuery plugin. It outputs given text with a nice blinker into the con
 
 - CSS3 animations
 - jQuery
+- < 700 bytes minified
 
 # Usage
 

@@ -1,4 +1,4 @@
-(function(){
+(function($){
 
     var _defaults = {
         text : '',
@@ -48,4 +48,4 @@
     $.fn.qtyper = function(options) {
         return new Qtyper(this, options || {});
     }
-})();
+})(jQuery);

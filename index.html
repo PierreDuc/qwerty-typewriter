@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qwerty TypeWriter</title>
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 500px;
+            margin: auto;
+        }
+
+        #typewriter,
+        textarea {
+            border: 1px solid #CCC;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        textarea {
+            height: 200px;
+        }
+
+        button {
+            border-radius: 10px;
+            border : none;
+            color : #FFF;
+            background : #c5095b;
+            width : 100%;
+            height : 50px;
+            outline : none;
+            cursor : pointer;
+        }
+    </style>
+    <link href="src/style.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="src/qwerty-typewriter.js"></script>
+</head>
+<body>
+    <div id="typewriter"></div>
+    <textarea id="source">Ut luctus augue libero, non pharetra massa laoreet eget. Etiam porta magna ac porta posuere. Nunc nisi lorem, blandit ornare gravida at, interdum nec nibh.</textarea>
+    <button>Type this</button>
+    <script>
+    var source = $('#source');
+    var typewriter = $('#typewriter');
+    var qtyper = typewriter.qtyper();
+    $('button').click(function(){
+        qtyper.type(source.val());
+    });
+</script>
+</body>
+</html>

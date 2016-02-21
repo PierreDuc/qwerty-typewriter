@@ -6,7 +6,7 @@ Typewriter jQuery plugin. It outputs given text with a nice blinker into the con
 
 # Usage
 
-<div id="typewriter"></div>
+&lt;div id="typewriter"&gt;&lt;/div&gt;
 
 var qtyper = $('#typewriter').qtyper(options);
 
